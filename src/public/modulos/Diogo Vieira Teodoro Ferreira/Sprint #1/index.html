@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DietaSmart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>DietaSmart</h1>
+
+  <label>Selecione seu objetivo:</label>
+
+  <br><br>
+
+  <select id="objetivo">
+    <option value="emagrecimento">Emagrecimento</option>
+    <option value="hipertrofia">Hipertrofia</option>
+    <option value="manutencao">Manutenção</option>
+  </select>
+
+  <button onclick="mostrarPlano()">
+    Mostrar Dieta e Rotina
+  </button>
+
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

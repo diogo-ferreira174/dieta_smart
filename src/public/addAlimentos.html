@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentos Preferidos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img id="logo" src="assets/images/logo-maca.png" alt="logo.png">
+        </a>
+        <img id="iconMenu" src="assets/images/menu-icon.png" alt="menu-icon">
+    </header>
+
+    <div id="menuLateral">
+        <div id="conteudoMenu">
+            <div class="cabeca">Menu</div>
+            <div class="item"><a href="index.html">Home-Page</div></a>
+            <div class="item"><a href="dieta.html">Dieta</div></a>
+            <div class="item"><a href="exercicios.html">Treinos</div></a>
+            <div class="item"><a href="imc.html">Calculadora IMC</div></a>
+            <div class="item"><a href="evolucao.html">Evolução</div></a>
+            <div class="item"><a href="rotina.html">Rotina</div></a>
+            <div class="item"><a href="pesagens.html">Pesagens</div></a>
+            <div class="item"><a href="addAlimentos.html">Lista de Alimentos</div></a>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <h3>Alimentos que desejo incluir</h3>
+
+            <div class="campo">
+                <label for="alimento">Novo alimento</label>
+                <input 
+                    type="text" 
+                    id="alimento" 
+                    placeholder="Digite um alimento"
+                >
+            </div>
+
+            <button onclick="adicionarAlimento()">
+                Adicionar
+            </button>
+
+            <div class="resultado">
+                <h4>Lista de alimentos</h4>
+                <ul id="listaAlimentos"></ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h2>DietaSmart™</h2>
+        <h4>Site por:</h4>
+        <ul>
+            <li>Arthur</li>
+            <li>Diogo</li>
+            <li>Enzo</li>
+            <li>Gabriel</li>
+            <li>Leandro</li>
+            <li>Oliveiros</li>
+            <li>Pedro</li>
+            <li>Vítor</li>
+        </ul>
+    </footer>
+
+    <script src="assets/js/addAlimentos.js"></script>
+</body>
+</html>

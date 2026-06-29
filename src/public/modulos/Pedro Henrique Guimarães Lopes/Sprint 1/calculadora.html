@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora TMB e GET</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Calculadora TMB e GET</h2>
+
+        <input type="number" id="peso" placeholder="Peso (kg)">
+        <input type="number" id="altura" placeholder="Altura (cm)">
+        <input type="number" id="idade" placeholder="Idade">
+
+        <select id="sexo">
+            <option value="homem">Homem</option>
+            <option value="mulher">Mulher</option>
+        </select>
+
+        <select id="atividade">
+            <option value="1.2">Sedentário</option>
+            <option value="1.375">Levemente ativo</option>
+            <option value="1.55">Moderadamente ativo</option>
+            <option value="1.725">Muito ativo</option>
+            <option value="1.9">Extremamente ativo</option>
+        </select>
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div class="resultado" id="resultado">
+            Preencha os dados.
+        </div>
+    </div>
+
+    <script src="calculadora.js"></script>
+</body>
+</html>

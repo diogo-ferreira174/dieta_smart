@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietaSmart - Painel Principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- (Topo do Wireframe) -->
+    <nav class="navbar">
+        <div class="logo">🟩 DietaSmart</div>
+        <div class="barra-pesquisa">
+            <input type="text" placeholder="Pesquise ferramentas...">
+        </div>
+        <div class="menu-hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <div class="container">
+        
+        <!-- SEÇÃO DO PAINEL DE CALORIAS  -->
+        <main id="secao-painel" class="conteudo-principal">
+            <h2 class="titulo-plano">PLANO PARA PERCA OU GANHO DE PESO</h2>
+
+            <div class="bloco-calorias">
+                <label>Calorias a serem consumidas no dia</label>
+                <div class="display-valor">2200 Calorias</div>
+            </div>
+
+            <div class="bloco-calorias">
+                <label>Calorias a serem queimadas no dia</label>
+                <div class="display-valor">500 Calorias</div>
+            </div>
+
+            <div class="bloco-calorias">
+                <label>Ganho ou Perca de Calorias</label>
+                <div class="display-valor saldo">1700 Calorias</div>
+            </div>
+
+            <!-- BOTÕES DEAÇÃO -->
+            <div class="botoes-container">
+                <button id="btn-ver-rotina" class="btn-acao">Ver Rotina</button>
+                <button class="btn-acao">Ver evolução</button>
+            </div>
+        </main>
+
+        <!-- SEÇÃO DA ROTINA  -->
+        <section id="secao-rotina" class="conteudo-principal escondido">
+            <h2 class="titulo-plano">📅 MEU CRONOGRAMA DIÁRIO</h2>
+            
+            <div class="tabela-rotina" id="grade-rotina">
+                <!-- Injetado dinamicamente via JS -->
+            </div>
+
+            <div class="botoes-container">
+                <button id="btn-voltar" class="btn-acao btn-secundario">← Voltar ao Painel</button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER  -->
+    <footer class="footer-desenvolvedores">
+        <div class="footer-logo">DietaSmart™</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI;
+}
+
+body{
+    background:#8dd4dd;
+    padding:30px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+section{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:15px;
+}
+
+form{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+}
+
+input,select,button{
+    padding:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:10px;
+    border:1px solid #ddd;
+}
+
+.barra{
+    height:35px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+#progresso{
+    width:0%;
+    height:100%;
+    background:#4caf50;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    transition:.5s;
+}
+
+.botoes{
+    margin-top:15px;
+    display:flex;
+    gap:10px;
+}
+
+.grafico-container {
+    width: 350px;
+    height: 350px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#graficoSexo {
+    max-width: 100%;
+    max-height: 100%;
+}

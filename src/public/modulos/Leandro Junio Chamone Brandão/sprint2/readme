@@ -1,0 +1,71 @@
+1. Extraia a pasta
+Se o arquivo veio compactado (.zip), clique com o botão direito e escolha Extrair Tudo.
+Você deve ficar com uma pasta chamada:
+
+sprint2
+2. Abra a pasta no VS Code
+Abra o VS Code
+Clique em Arquivo > Abrir Pasta
+Selecione a pasta sprint2
+3. Abra o terminal
+
+No VS Code:
+
+Terminal > Novo Terminal
+4. Entre na pasta do projeto
+
+Se necessário, digite:
+
+cd sprint2
+5. Inicie o banco de dados JSON
+
+Digite:
+
+npx json-server db.json
+
+Se tudo der certo, aparecerá algo parecido com:
+
+JSON Server started
+
+e o banco estará rodando em:
+
+http://localhost:3000
+
+⚠️ Não feche esse terminal.
+
+6. Abra o site
+
+Como o projeto tem apenas HTML, CSS e JavaScript, basta dar dois cliques em:
+
+index.html
+
+ou abrir o arquivo no navegador.
+
+Se aparecer o erro:
+File db.json not found
+
+Verifique se o terminal está dentro da pasta sprint2.
+
+Digite:
+
+dir
+
+Deve aparecer:
+
+db.json
+index.html
+script.js
+style.css
+
+Se esses arquivos não aparecerem, você está na pasta errada.
+
+Se aparecer o erro:
+'npx' não é reconhecido
+
+Instale o Node.js e reinicie o computador:
+
+Node.js
+
+Depois tente novamente:
+
+npx json-server db.json

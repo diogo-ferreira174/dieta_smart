@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de alimentos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/alimentos.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html">
+                <img id="logo" src="assets/images/logo-maca.png" alt="logo.png">
+            </a>
+        </div>
+        <img id="iconMenu" src="assets/images/menu-icon.png" alt="menu-icon">
+
+        <div id="menuLateral">
+            <div id="conteudoMenu">
+                <div class="cabeca">Menu</div>
+                <div class="item"><a href="index.html">Home-Page</a></div>
+                <div class="item"><a href="dieta.html">Dieta</a></div>
+                <div class="item"><a href="exercicios.html">Treinos</a></div>
+                <div class="item"><a href="imc.html">Calculadora IMC</a></div>
+                <div class="item"><a href="evolucao.html">Evolução</a></div>
+                <div class="item"><a href="rotina.html">Rotina</a></div>
+                <div class="item"><a href="pesagens.html">Pesagens</a></div>
+                <div class="item"><a href="alimentos.html">Consulta de alimentos</a></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="alimentos-page">
+        <section class="page-intro">
+            <h1>Consulta de alimentos</h1>
+            <p>Confira os alimentos cadastrados no banco de dados e identifique se eles são recomendáveis para uma dieta equilibrada.</p>
+        </section>
+
+        <section class="controle-panel">
+            <div class="controle-group">
+                <label class="controle-label" for="filterSelect">Filtrar alimentos</label>
+                <select id="filterSelect">
+                    <option value="all">Todos</option>
+                    <option value="recommended">Recomendáveis</option>
+                    <option value="not-recommended">Não recomendáveis</option>
+                </select>
+            </div>
+            <button id="refreshButton" type="button">Atualizar lista</button>
+        </section>
+
+        <section id="alimentos-container" class="alimentos-container"></section>
+        <section id="mensagem" class="mensagem" aria-live="polite"></section>
+    </main>
+
+    <footer>
+        <h2>DietaSmart™</h2>
+        <h4>Site por:</h4>
+        <ul>
+            <li>Arthur</li>
+            <li>Diogo</li>
+            <li>Enzo</li>
+            <li>Gabriel</li>
+            <li>Leandro</li>
+            <li>Oliveiros</li>
+            <li>Pedro</li>
+            <li>Vítor</li>
+        </ul>
+    </footer>
+
+    <script src="assets/js/alimentos.js"></script>
+</body>
+</html>

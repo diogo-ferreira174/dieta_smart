@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>HealthTrack</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💧 Controle de Hidratação</h1>
+        </header>
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Usuários</h3>
+                <p id="totalUsuarios">0</p>
+            </div>
+            <div class="card">
+                <h3>Peso Médio</h3>
+                <p id="pesoMedio">0</p>
+            </div>
+            <div class="card">
+                <h3>Idade Média</h3>
+                <p id="idadeMedia">0</p>
+            </div>
+        </section>
+        <section class="formulario">
+            <h2>Cadastro de Usuários</h2>
+            <form id="formUsuario">
+                <input id="nome" placeholder="Nome" required>
+                <input id="idade" type="number" placeholder="Idade" required>
+                <input id="peso" type="number" step="0.1" placeholder="Peso" required>
+                <input id="altura" type="number" step="0.01" placeholder="Altura" required>
+                <select id="sexo">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+                <button type="submit">
+                    Salvar
+                </button>
+            </form>
+        </section>
+        <section>
+            <h2>Pesquisar</h2>
+            <input id="pesquisa" placeholder="Pesquisar usuário" onkeyup="filtrarUsuarios()">
+        </section>
+        <section>
+            <h2>Usuários</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Peso</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaUsuarios">
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Controle de Hidratação</h2>
+            <input id="nomeHidratacao" placeholder="Nome do usuário">
+           <!--  <button onclick="buscarUsuario()">
+                Buscar
+            </button> -->
+            <h3 id="meta"></h3>
+            <div class="barra">
+                <div id="progresso">
+                    <span id="textoBarra">
+                        0%
+                    </span>
+                </div>
+            </div>
+            <div class="botoes">
+                <button type="button" onclick="buscarUsuario()">
+                    Buscar
+                </button>
+                <button onclick="adicionarAgua(0.2)">
+                    +200ml
+                </button>
+                <button onclick="adicionarAgua(0.5)">
+                    +500ml
+                </button>
+                <button onclick="adicionarAgua(1)">
+                    +1L
+                </button>
+            </div>
+            <p id="feedback"></p>
+        </section>
+        <section>
+    <h2>Distribuição por Sexo</h2>
+    <div class="grafico-container">
+        <canvas id="graficoSexo"></canvas>
+    </div>
+</section>
+        <!-- <section>
+            <h2>Distribuição por Sexo</h2>
+            <canvas id="graficoSexo">
+            </canvas>
+        </section> -->
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>

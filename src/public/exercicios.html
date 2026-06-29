@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seus Exercícios</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img id="logo" src="assets/images/logo-maca.png" alt="logo.png">
+        </a>
+        <img id="iconMenu" src="assets/images/menu-icon.png" alt="menu-icon">
+    </header>
+    <main>
+        <div id="menuLateral">
+            <div id="conteudoMenu">
+                <div class="cabeca">Menu</div>
+                <div class="item"><a href="index.html">Home-Page</div></a>
+                <div class="item"><a href="dieta.html">Dieta</div></a>
+                <div class="item"><a href="exercicios.html">Treinos</div></a>
+                <div class="item"><a href="imc.html">Calculadora IMC</div></a>
+                <div class="item"><a href="evolucao.html">Evolução</div></a>
+                <div class="item"><a href="rotina.html">Rotina</div></a>
+                <div class="item"><a href="pesagens.html">Pesagens</div></a>
+                <div class="item"><a href="addAlimentos.html">Lista de Alimentos</div></a>
+            </div>
+        </div>
+
+        <div class="fileira" style="display: block; justify-items: center;">
+            <div class="efetivo">
+                <div class="container">
+                    <h2>Monte sua Rotina de Exercícios</h2>
+
+                    <p style="display: inline;">Quantidade de exercicios: </p>
+                    <input type="text" style="display: inline;" id="qtdExercicios">
+                    <br><br>
+
+                    <div id="telaPrincipal">
+                        <div id="areaSeletores"></div>
+                        <div id="soma"></div>
+                        <button id="cadastro">Concluir rotina</button>
+                        <button id="modificar">Ver rotinas cadastradas</button>
+                    </div>
+                    <div class="agenda-card">
+                        <form id="agendaExerciciosForm">
+                            <h2>Agenda de Exercícios</h2>
+                            <div class="agenda-field">
+                                <label for="agendaExe1">Exercício 1</label>
+                                <input type="time" id="agendaExe1" name="agendaExe1">
+                            </div>
+                            <div class="agenda-field">
+                                <label for="agendaExe2">Exercício 2</label>
+                                <input type="time" id="agendaExe2" name="agendaExe2">
+                            </div>
+                            <div class="agenda-field">
+                                <label for="agendaExe3">Exercício 3</label>
+                                <input type="time" id="agendaExe3" name="agendaExe3">
+                            </div>
+                            <div class="agenda-field">
+                                <label for="agendaExe4">Exercício 4</label>
+                                <input type="time" id="agendaExe4" name="agendaExe4">
+                            </div>
+                            <div class="agenda-field">
+                                <label for="agendaExe5">Exercício 5</label>
+                                <input type="time" id="agendaExe5" name="agendaExe5">
+                            </div>
+                            <div class="agenda-actions">
+                                <button type="button" id="salvarExerciciosBtn">Salvar Horários</button>
+                                <button type="button" id="limparExerciciosBtn" class="secondary">Limpar Agenda</button>
+                            </div>
+                        </form>
+                        <div id="resultadoExercicios" class="resultado">
+                            <p>Preencha os horários e clique em "Salvar Horários".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h2>DietaSmart™</h2>
+        <h4>Site por:</h4>
+        <ul>
+            <li>Arthur</li>
+            <li>Diogo</li>
+            <li>Enzo</li>
+            <li>Gabriel</li>
+            <li>Leandro</li>
+            <li>Oliveiros</li>
+            <li>Pedro</li>
+            <li>Vítor</li>
+        </ul>
+    </footer>
+
+    <script src="assets/js/exercicios.js"></script>
+    <script src="assets/js/agenda-exercicios.js"></script>
+</body>
+
+</html>

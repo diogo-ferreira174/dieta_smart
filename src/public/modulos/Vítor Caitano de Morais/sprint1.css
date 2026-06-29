@@ -1,0 +1,22 @@
+.barra {
+    border: black, 1px, solid;
+    width: 80%;
+    height: 3rem;
+    border-radius: 70px;
+}
+
+#DTprogressao {
+    height: 100%;
+    background-color: aqua;
+    border-radius: 70px;
+    transition: 0.1s;
+    max-width: 100%;
+}
+
+#EXprogressao {
+    height: 100%;
+    background-color: orangered;
+    border-radius: 70px;
+    transition: 0.1s;
+    max-width: 100%;
+}

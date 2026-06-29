@@ -1,0 +1,546 @@
+{
+  "usuarios1": [
+    {
+      "id": "1",
+      "nome": "José",
+      "idade": 20,
+      "sexo": "M",
+      "peso": 67.5,
+      "altura": 1.9,
+      "tmb": 1767.5,
+      "get": 2430.312,
+      "nível de atividade física": 2
+    },
+    {
+      "id": "2",
+      "nome": "Samara",
+      "idade": 23,
+      "sexo": "F",
+      "peso": 69.3,
+      "altura": 1.77,
+      "tmb": 1505.25,
+      "get": 2333.13,
+      "nível de atividade física": 3
+    },
+    {
+      "id": "3",
+      "nome": "Carlos",
+      "idade": 31,
+      "sexo": "M",
+      "peso": 82.5,
+      "altura": 1.8,
+      "tmb": 1812.5,
+      "get": 3443.75,
+      "nível de atividade física": 4
+    },
+    {
+      "id": "4",
+      "nome": "Fernanda",
+      "idade": 27,
+      "sexo": "F",
+      "peso": 58.2,
+      "altura": 1.65,
+      "tmb": 1317.25,
+      "get": 1811.21,
+      "nível de atividade física": 2
+    },
+    {
+      "id": "5",
+      "nome": "Lucas",
+      "idade": 19,
+      "sexo": "M",
+      "peso": 74.1,
+      "altura": 1.73,
+      "tmb": 1732.25,
+      "get": 3291.275,
+      "nível de atividade física": 4
+    },
+    {
+      "id": "6",
+      "nome": "Juliana",
+      "idade": 35,
+      "sexo": "F",
+      "peso": 63.7,
+      "altura": 1.68,
+      "tmb": 1351,
+      "get": 2094.05,
+      "nível de atividade física": 3
+    },
+    {
+      "id": "7",
+      "nome": "Rafael",
+      "idade": 29,
+      "sexo": "M",
+      "peso": 90.4,
+      "altura": 1.85,
+      "tmb": 1920.25,
+      "get": 3648.475,
+      "nível de atividade física": 4
+    },
+    {
+      "id": "8",
+      "nome": "Amanda",
+      "idade": 22,
+      "sexo": "F",
+      "peso": 54.8,
+      "altura": 1.6,
+      "tmb": 1277,
+      "get": 1755.875,
+      "nível de atividade física": 2
+    },
+    {
+      "id": "9",
+      "nome": "Bruno",
+      "idade": 40,
+      "sexo": "M",
+      "peso": 96.2,
+      "altura": 1.78,
+      "tmb": 1879.5,
+      "get": 2255.4,
+      "nível de atividade física": 1
+    },
+    {
+      "id": "10",
+      "nome": "Patrícia",
+      "idade": 26,
+      "sexo": "F",
+      "peso": 71.5,
+      "altura": 1.72,
+      "tmb": 1499,
+      "get": 2323.45,
+      "nível de atividade física": 3
+    }
+  ],
+  "dietas": [
+    {
+      "id": "111",
+      "refeicoes": [
+        1129,
+        1116,
+        1130,
+        1122
+      ],
+      "calorias": 1460
+    },
+    {
+      "id": "112",
+      "refeicoes": [
+        1111,
+        1112,
+        1117,
+        1118
+      ],
+      "calorias": 1570
+    },
+    {
+      "id": "113",
+      "refeicoes": [
+        1120,
+        1116,
+        1119,
+        1122
+      ],
+      "calorias": 1700
+    },
+    {
+      "id": "114",
+      "refeicoes": [
+        1115,
+        1116,
+        1120,
+        1114
+      ],
+      "calorias": 1840
+    },
+    {
+      "id": "115",
+      "refeicoes": [
+        1129,
+        1114,
+        1117,
+        1125
+      ],
+      "calorias": 1950
+    },
+    {
+      "id": "116",
+      "refeicoes": [
+        1111,
+        1113,
+        1126,
+        1115,
+        1112
+      ],
+      "calorias": 2130
+    },
+    {
+      "id": "117",
+      "refeicoes": [
+        1120,
+        1124,
+        1119,
+        1116
+      ],
+      "calorias": 2230
+    },
+    {
+      "id": "118",
+      "refeicoes": [
+        1111,
+        1125,
+        1118,
+        1124
+      ],
+      "calorias": 2310
+    },
+    {
+      "id": "119",
+      "refeicoes": [
+        1115,
+        1127,
+        1120,
+        1119,
+        1124
+      ],
+      "calorias": 2920
+    },
+    {
+      "id": "120",
+      "refeicoes": [
+        1119,
+        1113,
+        1127,
+        1124,
+        1125
+      ],
+      "calorias": 3170
+    }
+  ],
+  "refeições": [
+    {
+      "id": "1111",
+      "nome": "Sanduíche de presunto de queijo",
+      "peso": 150,
+      "calorias": 350,
+      "nutricional": {
+        "carboidratos": 45,
+        "proteinas": 20,
+        "gorduras": 12
+      },
+      "concluido": false
+    },
+    {
+      "id": "1112",
+      "nome": "Arroz com frango grelhado",
+      "peso": 300,
+      "calorias": 520,
+      "nutricional": {
+        "carboidratos": 55,
+        "proteinas": 38,
+        "gorduras": 14
+      },
+      "concluido": false
+    },
+    {
+      "id": "1113",
+      "nome": "Iogurte com granola",
+      "peso": 200,
+      "calorias": 280,
+      "nutricional": {
+        "carboidratos": 35,
+        "proteinas": 12,
+        "gorduras": 8
+      },
+      "concluido": false
+    },
+    {
+      "id": "1114",
+      "nome": "Macarrão ao molho branco",
+      "peso": 350,
+      "calorias": 610,
+      "nutricional": {
+        "carboidratos": 70,
+        "proteinas": 18,
+        "gorduras": 25
+      },
+      "concluido": false
+    },
+    {
+      "id": "1115",
+      "nome": "Panquecas com mel",
+      "peso": 180,
+      "calorias": 420,
+      "nutricional": {
+        "carboidratos": 60,
+        "proteinas": 10,
+        "gorduras": 15
+      },
+      "concluido": false
+    },
+    {
+      "id": "1116",
+      "nome": "Peixe assado com legumes",
+      "peso": 320,
+      "calorias": 480,
+      "nutricional": {
+        "carboidratos": 28,
+        "proteinas": 42,
+        "gorduras": 16
+      },
+      "concluido": false
+    },
+    {
+      "id": "1117",
+      "nome": "Vitamina de banana",
+      "peso": 250,
+      "calorias": 310,
+      "nutricional": {
+        "carboidratos": 40,
+        "proteinas": 9,
+        "gorduras": 7
+      },
+      "concluido": false
+    },
+    {
+      "id": "1118",
+      "nome": "Omelete com queijo",
+      "peso": 220,
+      "calorias": 390,
+      "nutricional": {
+        "carboidratos": 6,
+        "proteinas": 27,
+        "gorduras": 28
+      },
+      "concluido": false
+    },
+    {
+      "id": "1119",
+      "nome": "Mix de castanhas",
+      "peso": 100,
+      "calorias": 560,
+      "nutricional": {
+        "carboidratos": 18,
+        "proteinas": 14,
+        "gorduras": 46
+      },
+      "concluido": false
+    },
+    {
+      "id": "1120",
+      "nome": "Tapioca com ovo",
+      "peso": 170,
+      "calorias": 330,
+      "nutricional": {
+        "carboidratos": 38,
+        "proteinas": 16,
+        "gorduras": 11
+      },
+      "concluido": false
+    },
+    {
+      "id": "1121",
+      "nome": "Arroz, bife de boi e fritas",
+      "peso": 330,
+      "calorias": 650,
+      "nutricional": {
+        "carboidratos": 55,
+        "proteinas": 30,
+        "gorduras": 20
+      },
+      "concluido": false
+    },
+    {
+      "id": "1122",
+      "nome": "Sanduíche natural de atum",
+      "peso": 210,
+      "calorias": 330,
+      "nutricional": {
+        "carboidratos": 28,
+        "proteinas": 22,
+        "gorduras": 11
+      },
+      "concluido": false
+    },
+    {
+      "id": "1123",
+      "nome": "Sopa de legumes com carne",
+      "peso": 340,
+      "calorias": 390,
+      "nutricional": {
+        "carboidratos": 26,
+        "proteinas": 29,
+        "gorduras": 18
+      },
+      "concluido": false
+    },
+    {
+      "id": "1124",
+      "nome": "Hamburguer artesanal",
+      "peso": 450,
+      "calorias": 850,
+      "nutricional": {
+        "carboidratos": 64,
+        "proteinas": 39,
+        "gorduras": 47
+      },
+      "concluido": false
+    },
+    {
+      "id": "1125",
+      "nome": "Strogonoff de frango com arroz e batata palha",
+      "peso": 460,
+      "calorias": 720,
+      "nutricional": {
+        "carboidratos": 58,
+        "proteinas": 39,
+        "gorduras": 34
+      },
+      "concluido": false
+    },
+    {
+      "id": "1126",
+      "nome": "Purê de batata com carne",
+      "peso": 390,
+      "calorias": 560,
+      "nutricional": {
+        "carboidratos": 44,
+        "proteinas": 31,
+        "gorduras": 27
+      },
+      "concluido": false
+    },
+    {
+      "id": "1127",
+      "nome": "Lasanha de carne",
+      "peso": 410,
+      "calorias": 760,
+      "nutricional": {
+        "carboidratos": 57,
+        "proteinas": 37,
+        "gorduras": 41
+      },
+      "concluido": false
+    },
+    {
+      "id": "1128",
+      "nome": "Salada de frutas com iorgute",
+      "peso": 240,
+      "calorias": 280,
+      "nutricional": {
+        "carboidratos": 42,
+        "proteinas": 10,
+        "gorduras": 8
+      },
+      "concluido": false
+    },
+    {
+      "id": "1129",
+      "nome": "Mingau de aveia com canela",
+      "peso": 260,
+      "calorias": 310,
+      "nutricional": {
+        "carboidratos": 47,
+        "proteinas": 11,
+        "gorduras": 7
+      },
+      "concluido": false
+    },
+    {
+      "id": "1130",
+      "nome": "Pão de queijo com café",
+      "peso": 180,
+      "calorias": 340,
+      "nutricional": {
+        "carboidratos": 29,
+        "proteinas": 10,
+        "gorduras": 20
+      },
+      "concluido": false
+    }
+  ],
+  "exercícios": [
+    {
+      "id": "11111",
+      "tipo": "caminhada",
+      "calorias": 250,
+      "tempo": 60
+    },
+    {
+      "id": "11112",
+      "tipo": "corrida",
+      "calorias": 500,
+      "tempo": 50
+    },
+    {
+      "id": "11113",
+      "tipo": "musculação",
+      "calorias": 400,
+      "tempo": 60
+    },
+    {
+      "id": "11114",
+      "tipo": "calistenia",
+      "calorias": 200,
+      "tempo": 30
+    },
+    {
+      "id": "11115",
+      "tipo": "natação",
+      "calorias": 750,
+      "tempo": 80
+    },
+    {
+      "id": "11116",
+      "tipo": "pular corda",
+      "calorias": 140,
+      "tempo": 10
+    },
+    {
+      "id": "11117",
+      "tipo": "futebol",
+      "calorias": 300,
+      "tempo": 40
+    },
+    {
+      "id": "11118",
+      "tipo": "volei",
+      "calorias": 200,
+      "tempo": 40
+    },
+    {
+      "id": "11119",
+      "tipo": "basquete",
+      "calorias": 300,
+      "tempo": 40
+    },
+    {
+      "id": "11120",
+      "tipo": "polichinelo",
+      "calorias": 100,
+      "tempo": 10
+    }
+  ],
+  "pesagens": [
+    {
+      "data": "2026-06-07",
+      "peso": 111,
+      "id": "z_tOLeJH1zI"
+    },
+    {
+      "data": "2026-06-10",
+      "peso": 67,
+      "id": "sicCJ6eOLsE"
+    },
+    {
+      "data": "2026-06-12",
+      "peso": 2131,
+      "id": "vSsOzBtCldI"
+    },
+    {
+      "data": "2026-06-17",
+      "peso": 120,
+      "id": "9pU4smvtL5k"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,180 @@
+/* Configuração do fundo preto sólido baseado nas suas preferências */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    padding: 15px 30px;
+    border-bottom: 1px solid #282828;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.barra-pesquisa input {
+    background-color: #242424;
+    border: 1px solid #3d3d3d;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    width: 250px;
+}
+
+.menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* CONTEÚDO E BLOCOS DO WIREFRAME */
+.conteudo-principal {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+}
+
+.titulo-plano {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+.bloco-calorias {
+    margin-bottom: 25px;
+}
+
+.bloco-calorias label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #b3b3b3;
+}
+
+.display-valor {
+    background-color: #181818;
+    border: 1px solid #333;
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.display-valor.saldo {
+    border-color: #1db954;
+    color: #1db954;
+}
+
+/* BOTÕES */
+.botoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 35px;
+}
+
+.btn-acao {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 25px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn-acao:hover {
+    transform: scale(1.05);
+}
+
+.btn-acao.btn-secundario {
+    background-color: #1db954;
+    color: #000;
+}
+
+/* ELEMENTOS DA ROTINA */
+.tabela-rotina {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.card-horario {
+    display: flex;
+    background-color: #121212;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #1db954;
+}
+
+.hora-bloco {
+    font-weight: bold;
+    color: #1db954;
+    min-width: 70px;
+}
+
+.detalhes-bloco h3 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+}
+
+.detalhes-bloco p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #a7a7a7;
+}
+
+/* UTILITÁRIOS */
+.escondido {
+    display: none !important;
+}
+
+/* FOOTER */
+.footer-desenvolvedores {
+    background-color: #121212;
+    padding: 20px 40px;
+    border-top: 1px solid #282828;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.autores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+

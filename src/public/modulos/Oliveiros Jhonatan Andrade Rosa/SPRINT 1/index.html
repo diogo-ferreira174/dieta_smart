@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Calorias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .chart-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .bar-container {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bar-background {
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            width: 100%;
+            height: 25px;
+            overflow: hidden;
+            position: relative; /* Mantém o alinhamento correto */
+        }
+
+        .bar-fill {
+            height: 100%;
+            width: 0%; /* Começa em zero para animar */
+            transition: width 1.5s ease-in-out;
+            border-radius: 8px;
+            
+            /* Centraliza o texto da porcentagem no meio da barra */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff; /* Texto branco */
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap; /* Evita que o texto quebre de linha */
+        }
+
+        .consumidas {
+            background-color: #2e7d32; /* Verde */
+        }
+
+        .queimadas {
+            background-color: #d84315; /* Laranja */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chart-card">
+        <h2 id="titulo-grafico">Relação de Calorias</h2>
+
+        <!-- Barra de Calorias Consumidas -->
+        <div class="bar-container">
+            <div class="label">
+                <span>Calorias Consumidas</span>
+                <span id="valor-consumidas">0 kcal</span>
+            </div>
+            <div class="bar-background">
+                <!-- Adicionado o id 'porcentagem-consumidas' para injetar o texto -->
+                <div id="barra-consumidas" class="bar-fill consumidas">
+                    <span id="porcentagem-consumidas">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra de Meta (Queimadas) -->
+        <div class="bar-container">
+            <div class="label">
+                <span>Meta de Gasto Diário (GET)</span>
+                <span id="valor-queimadas">0 kcal</span>
+            </div>
+            <div class="bar-background">
+                <!-- A barra de meta sempre representa 100% do dia -->
+                <div id="barra-queimadas" class="bar-fill queimadas">
+                    <span>100%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

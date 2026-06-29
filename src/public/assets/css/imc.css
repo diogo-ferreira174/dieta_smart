@@ -1,0 +1,289 @@
+
+body {
+    max-width: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding: 10px 170px;
+    background-color: #5a7f27;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 10px #5f5f5f;
+}
+
+main {
+    padding: 15px 40px;
+}
+
+footer {
+    padding: 20px 25px;
+    background-color: #5a7f27;
+    color: white;
+}
+
+ul {
+    margin-block-start: 7px;
+    margin-block-end: 7px;
+    padding-inline-start: 0;
+}
+
+footer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    padding-left: 0;
+}
+
+#logo {
+    height: 8vh;
+    display: inline-block;
+}
+
+#iconMenu {
+    height: 4vh;
+}
+
+#menuLateral {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    height: 100vh;
+    width: 30vw;
+    border: black solid 1px;
+    background-color: #eafeb9;
+    transition: 0.3s;
+}
+
+#menuLateral a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#conteudoMenu {
+    height: 80%;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.cabeca {
+    border-bottom: black solid 1px;
+    display: flex;
+    align-items: center;
+    background-color: #cae28c;
+    padding-left: 30px;
+}
+
+.item {
+    border-bottom: black solid 1px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.fileira {
+    margin: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.funcionalidade {
+    border: none;
+    height: 80vh;
+    width: 28vw;
+    background-color: #eefbcf;
+}
+
+.demonstrativo {
+    border: none;
+    height: 80vh;
+    width: 35vw;
+    background-color: #eefbcf;
+}
+
+.efetivo {
+    border: none;
+    height: fit-content;
+    width: 50vw;
+    background-color: #eefbcf;
+}
+
+#textos {
+    margin: 30px 20px;
+}
+
+#textos h2 {
+    color: #1b2416;
+    font-size: 2em;
+}
+
+#textos p {
+    font-size: 1em;
+}
+
+
+/*css Gabriel*/
+.container{
+    margin: 8%;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0 0 10px 1px #4e4e4e;
+}
+.container h3{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 25px;
+    font-size: 1.5em;
+}
+
+.campo{
+    margin: 20px 0;    
+}
+.campo label{
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.campo input {
+    margin-bottom: 10px;
+}
+
+input{
+    padding: 12px;
+    border: #707070 solid 1px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f0ffca;
+    color: #333;
+}
+
+.campo input:focus{
+    outline: none;
+    border: 2px solid #995a65;
+}
+
+button{
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 80%;
+    padding: 12px;
+    border: #3e4222 solid 1px;
+    border-radius: 4px;
+    background-color: 6c63ff;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #daffa7;
+}
+
+button:hover{
+    background-color: #a6da5c;
+}
+
+.resultado{
+    text-align: center;
+    padding: 21px;
+    background-color: #b7d371;
+    font-size: 17px;
+    border-radius: 4px;
+}
+
+
+
+/*Consumo de água*/
+.container-2{
+    /* width: 80%; */
+    max-width: 700px; /* antes era 700px */
+    height: 80vh;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin: auto;
+    transform: scale(0.85);
+    transform-origin: top center;
+}
+
+header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.card{
+    background:white;
+    padding:12px;
+    border-radius:15px;
+    text-align:center;
+}
+
+section{
+    background:white;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:15px;
+}
+
+form{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:3px;
+}
+
+input,select,button{
+    padding:8px;
+    width: 90px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:6px;
+    font-size: 14px;
+    border:1px solid #ddd;
+}
+
+.barra{
+    height:35px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+#progresso{
+    width:0%;
+    height:100%;
+    background:#4caf50;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    transition:.5s;
+}
+
+.botoes{
+    margin-top:15px;
+    display:flex;
+    gap:10px;
+}

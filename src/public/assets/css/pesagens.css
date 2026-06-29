@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f3f3;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    padding: 10px 170px;
+    background-color: #5a7f27;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 10px #5f5f5f;
+}
+
+#logo {
+    height: 8vh;
+}
+
+#iconMenu {
+    height: 4vh;
+    cursor: pointer;
+}
+
+#menuLateral {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    height: 100vh;
+    width: 30vw;
+    border: 1px solid black;
+    background-color: #eafeb9;
+}
+
+#menuLateral a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#conteudoMenu {
+    height: 80%;
+    display: grid;
+}
+
+.cabeca {
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    background-color: #cae28c;
+    padding-left: 30px;
+}
+
+.item {
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 25px;
+    background-color: #5a7f27;
+    color: white;
+}
+
+footer ul {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.container {
+    width: 70%;
+    margin: 60px auto;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+.container p {
+    font-size: 1.3rem;
+}
+
+.container2 {
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+.container .titulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.formulario{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    align-items:center;
+}
+
+.campo-data{
+    position:relative;
+}
+
+#data,
+#peso{
+    width:200px;
+    height:45px;
+    border:1px solid #ccc;
+    border-radius:20px;
+    padding:0 15px;
+    font-size:16px;
+}
+
+#btnCalendario{
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button{
+    height:45px;
+    padding:0 20px;
+    border:none;
+    border-radius:20px;
+    background:#5a7f27;
+    color:white;
+    cursor:pointer;
+    transition:.2s;
+}
+
+button:hover{
+    opacity:.9;
+    transform:scale(1.03);
+}
+
+.grafico{
+    margin-left:auto;
+    padding-top:4rem;
+}
+
+.pesagens-info{
+    list-style:none;
+    margin-top:20px;
+    padding:0;
+}
+
+
+
+.pesagens-info li{
+    background:#f0f4f8;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.mensagem-pesagem {
+    margin-top: 12px;
+    min-height: 24px;
+    color: #2e7d32;
+    font-weight: 700;
+}
+
+.mensagem-pesagem.erro {
+    color: #c62828;
+}
+
+@media (max-width:1000px){
+
+    .container{
+        flex-direction:column;
+        width:90%;
+    }
+
+    .grafico{
+        margin:40px auto 0;
+    }
+
+    .formulario{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    #data,
+    #peso,
+    button{
+        width:100%;
+    }
+
+}

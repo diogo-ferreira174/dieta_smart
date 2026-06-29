@@ -1,0 +1,14 @@
+[
+  {
+    "id": 3,
+    "nome": "Carlos",
+    "idade": 31,
+    "sexo": "M",
+    "peso": 82.5,
+    "altura": 1.80,
+    "tmb": 1812.5,
+    "get": 3443.75,
+    "nível de atividade física": 4,
+    "calorias_consumidas": 1812
+  }
+]

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietaSmart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>DietaSmart</h1>
+    <p>Registre suas pesagens e acompanhe sua evolução.</p>
+
+    <div class="card">
+        <h2>Nova Pesagem</h2>
+
+        <div class="formulario">
+
+            <div class="campo-data">
+
+                <input type="date" id="data">
+
+                <button
+                    type="button"
+                    id="btnCalendario"
+                    title="Abrir calendário">
+                    📅
+                </button>
+
+            </div>
+
+            <input
+                type="number"
+                id="peso"
+                placeholder="Peso (kg)"
+                step="0.1"
+            >
+
+            <button onclick="adicionarPesagem()">
+                Adicionar
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+        <h2>Histórico de Pesagens</h2>
+
+        <ul id="listaPesagens"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
