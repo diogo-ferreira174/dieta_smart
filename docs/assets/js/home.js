@@ -22,77 +22,86 @@ checaCadastro = async () => {
             return
         }
 
-        const resposta = await fetch(`http://localhost:3000/usuarios/${idProcurado}`)
-
-        if(resposta.ok)
-        {
-            const dados = await resposta.json()
-            showUserInfo(dados)
-
-            if(dados.cadastrado === true)
-            {
-                console.log('Verificado com sucesso')
-            }
-            else
-            {
-                window.location.href = "cadastro.html"
-            }
-
-            document.getElementById('peso').value = dados.peso;
-            document.getElementById('altura').value = dados.altura;
-
-            function caucularIMC() {
-                console.log('calculo')
-                let peso = document.getElementById('peso').value;
-                let altura = document.getElementById('altura').value;
-                let resultado = document.getElementById("resultado");
-
-                if(altura > 3)
-                    altura = altura / 100;
-
-                document.getElementById('altura').value = altura;
-
-                if(peso <= 0 || altura <= 0 || isNaN(peso) || isNaN(altura)){
-                    resultado.innerHTML = "Informe valores válidos!";
-                    return;
-                }
-                let imc = peso / (altura * altura);
-                let classificacao = "";
-
-                if(imc < 18.5){
-                    classificacao = "Abaixo do peso";
-                }
-                else if(imc < 25){
-                    classificacao = "Peso normal";
-                }
-                else if(imc < 30){
-                    classificacao = "Sobrepeso";
-                }
-                else if(imc < 35){
-                    classificacao = "Obesidade grau 1";
-                }
-                else if(imc < 40){
-                    classificacao = "Obesidade grau 2";
-                }
-                else{
-                    classificacao = "Obesidade grau 3";
-                }
-                
-                resultado.innerHTML = `
-                    IMC: ${imc.toFixed(2)} <br>
-                    Classificação: ${classificacao}
-                `;
-            }
-
-            document.getElementById('btnIMC').addEventListener('click', await caucularIMC)
-
-            await caucularIMC()
+        async function buscarUsuarioLocal(id) {
+            const usuarios = JSON.parse(localStorage.getItem('dietaSmartUsuarios') || '[]');
+            return usuarios.find(u => String(u.id) === String(id)) || null;
         }
-        else
-        {
-            alert('houve um erro na requisição das informações')
+
+        async function buscarUsuarioRemoto(id) {
+            const resposta = await fetch(`http://localhost:3000/usuarios/${id}`)
+            if (!resposta.ok) throw new Error('Usuário não encontrado no servidor');
+            return resposta.json();
+        }
+
+        let dados = null;
+        try {
+            dados = await buscarUsuarioRemoto(idProcurado);
+        } catch (erro) {
+            console.warn('Falha ao buscar usuário no servidor, usando dados locais:', erro);
+            dados = await buscarUsuarioLocal(idProcurado);
+        }
+
+        if (!dados) {
             window.location.href = "cadastro.html"
+            return
         }
+
+        showUserInfo(dados)
+
+        if(dados.cadastrado !== true)
+        {
+            window.location.href = "cadastro.html"
+            return
+        }
+
+        document.getElementById('peso').value = dados.peso;
+        document.getElementById('altura').value = dados.altura;
+
+        function caucularIMC() {
+            let peso = document.getElementById('peso').value;
+            let altura = document.getElementById('altura').value;
+            let resultado = document.getElementById("resultado");
+
+            if(altura > 3)
+                altura = altura / 100;
+
+            document.getElementById('altura').value = altura;
+
+            if(peso <= 0 || altura <= 0 || isNaN(peso) || isNaN(altura)){
+                resultado.innerHTML = "Informe valores válidos!";
+                return;
+            }
+            let imc = peso / (altura * altura);
+            let classificacao = "";
+
+            if(imc < 18.5){
+                classificacao = "Abaixo do peso";
+            }
+            else if(imc < 25){
+                classificacao = "Peso normal";
+            }
+            else if(imc < 30){
+                classificacao = "Sobrepeso";
+            }
+            else if(imc < 35){
+                classificacao = "Obesidade grau 1";
+            }
+            else if(imc < 40){
+                classificacao = "Obesidade grau 2";
+            }
+            else{
+                classificacao = "Obesidade grau 3";
+            }
+            
+            resultado.innerHTML = `
+                IMC: ${imc.toFixed(2)} <br>
+                Classificação: ${classificacao}
+            `;
+        }
+
+        document.getElementById('btnIMC').addEventListener('click', caucularIMC)
+
+        caucularIMC()
     }
     catch(erro)
     {
@@ -119,14 +128,18 @@ document.getElementById("logout").addEventListener('click', async() => {
     const id = localStorage.getItem('idProcurado')
 
     if(id) {
-        await fetch(`http://localhost:3000/usuarios/${id}`, {
-            method: 'DELETE'
-        })
-        localStorage.removeItem('idProcurado')
-        alert('insira suas informações novamente')
+        try {
+            await fetch(`http://localhost:3000/usuarios/${id}`, {
+                method: 'DELETE'
+            })
+        } catch (erro) {
+            console.warn('Servidor de usuários indisponível, continuando com logout local.', erro);
+        }
 
+        localStorage.removeItem('idProcurado')
+        alert('Insira suas informações novamente')
         window.location = 'cadastro.html'
-    }else {
+    } else {
         console.error("ID não encontrado");
     }
 })

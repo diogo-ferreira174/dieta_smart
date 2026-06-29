@@ -82,6 +82,18 @@ formulario.addEventListener("submit", async function(event) {
         "cadastrado": true
     };
 
+    async function salvarUsuarioLocalmente(usuario) {
+        const chave = 'dietaSmartUsuarios';
+        const usuariosSalvos = JSON.parse(localStorage.getItem(chave) || '[]');
+        const usuarioComId = {
+            ...usuario,
+            id: usuario.id || String(Date.now())
+        };
+        usuariosSalvos.push(usuarioComId);
+        localStorage.setItem(chave, JSON.stringify(usuariosSalvos));
+        return usuarioComId;
+    }
+
     try {
         const resposta = await fetch('http://localhost:3000/usuarios', {
             method: 'POST',
@@ -93,16 +105,20 @@ formulario.addEventListener("submit", async function(event) {
 
         if (resposta.ok) {
             const usuarioCriado = await resposta.json();
-
             localStorage.setItem("idProcurado", String(usuarioCriado.id));
-
             window.location.href = "index.html";
-        } else {
-            alert('Algo deu errado');
+            return;
         }
+
+        console.warn('Servidor não respondeu corretamente, salvando usuário localmente.');
+        const usuarioSalvo = await salvarUsuarioLocalmente(dados);
+        localStorage.setItem("idProcurado", String(usuarioSalvo.id));
+        window.location.href = "index.html";
     }
     catch (erro) {
-        console.error('Algo deu errado: ', erro);
-        alert('Erro ao cadastrar usuário.');
+        console.warn('Não foi possível cadastrar via servidor, salvando localmente:', erro);
+        const usuarioSalvo = await salvarUsuarioLocalmente(dados);
+        localStorage.setItem("idProcurado", String(usuarioSalvo.id));
+        window.location.href = "index.html";
     }
 });
