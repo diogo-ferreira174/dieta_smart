@@ -22,8 +22,22 @@ checaCadastro = async () => {
             return
         }
 
-        async function buscarUsuarioLocal(id) {
-            const usuarios = JSON.parse(localStorage.getItem('dietaSmartUsuarios') || '[]');
+        function lerUsuariosLocais() {
+            const raw = localStorage.getItem('dietaSmartUsuarios');
+            if (!raw) return [];
+
+            try {
+                const dados = JSON.parse(raw);
+                return Array.isArray(dados) ? dados : [];
+            } catch (erro) {
+                console.warn('Dados locais de usuários inválidos, resetando armazenamento.', erro);
+                localStorage.removeItem('dietaSmartUsuarios');
+                return [];
+            }
+        }
+
+        function buscarUsuarioLocal(id) {
+            const usuarios = lerUsuariosLocais();
             return usuarios.find(u => String(u.id) === String(id)) || null;
         }
 
@@ -38,7 +52,7 @@ checaCadastro = async () => {
             dados = await buscarUsuarioRemoto(idProcurado);
         } catch (erro) {
             console.warn('Falha ao buscar usuário no servidor, usando dados locais:', erro);
-            dados = await buscarUsuarioLocal(idProcurado);
+            dados = buscarUsuarioLocal(idProcurado);
         }
 
         if (!dados) {

@@ -82,9 +82,24 @@ formulario.addEventListener("submit", async function(event) {
         "cadastrado": true
     };
 
+    function lerUsuariosLocais() {
+        const chave = 'dietaSmartUsuarios';
+        const raw = localStorage.getItem(chave);
+        if (!raw) return [];
+
+        try {
+            const dados = JSON.parse(raw);
+            return Array.isArray(dados) ? dados : [];
+        } catch (erro) {
+            console.warn('Dados locais de usuários inválidos, resetando armazenamento.', erro);
+            localStorage.removeItem(chave);
+            return [];
+        }
+    }
+
     async function salvarUsuarioLocalmente(usuario) {
         const chave = 'dietaSmartUsuarios';
-        const usuariosSalvos = JSON.parse(localStorage.getItem(chave) || '[]');
+        const usuariosSalvos = lerUsuariosLocais();
         const usuarioComId = {
             ...usuario,
             id: usuario.id || String(Date.now())
@@ -92,6 +107,11 @@ formulario.addEventListener("submit", async function(event) {
         usuariosSalvos.push(usuarioComId);
         localStorage.setItem(chave, JSON.stringify(usuariosSalvos));
         return usuarioComId;
+    }
+
+    function marcarUsuarioComoCorrente(usuario) {
+        sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuario));
+        localStorage.setItem('idProcurado', String(usuario.id));
     }
 
     try {
@@ -105,20 +125,20 @@ formulario.addEventListener("submit", async function(event) {
 
         if (resposta.ok) {
             const usuarioCriado = await resposta.json();
-            localStorage.setItem("idProcurado", String(usuarioCriado.id));
+            marcarUsuarioComoCorrente(usuarioCriado);
             window.location.href = "index.html";
             return;
         }
 
         console.warn('Servidor não respondeu corretamente, salvando usuário localmente.');
         const usuarioSalvo = await salvarUsuarioLocalmente(dados);
-        localStorage.setItem("idProcurado", String(usuarioSalvo.id));
+        marcarUsuarioComoCorrente(usuarioSalvo);
         window.location.href = "index.html";
     }
     catch (erro) {
         console.warn('Não foi possível cadastrar via servidor, salvando localmente:', erro);
         const usuarioSalvo = await salvarUsuarioLocalmente(dados);
-        localStorage.setItem("idProcurado", String(usuarioSalvo.id));
+        marcarUsuarioComoCorrente(usuarioSalvo);
         window.location.href = "index.html";
     }
 });
