@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações dos Alimentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <div>
+                <p class="eyebrow">NutriSmart
+                <h1>Informações dos Alimentos</h1>
+                <p class="subtitle">Consulte os alimentos carregados do <code>db.json</code> via <code>json-server</code> e veja se eles são recomendáveis.</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="controle-panel">
+                <div>
+                    <p class="controle-label">Filtrar alimentos</p>
+                    <select id="filterSelect">
+                        <option value="all">Todos</option>
+                        <option value="recommended">Recomendáveis</option>
+                        <option value="not-recommended">Não recomendáveis</option>
+                    </select>
+                </div>
+                <button id="refreshButton" type="button">Atualizar lista</button>
+            </section>
+
+            <section id="alimentos-container" class="alimentos-container"></section>
+            <section id="mensagem" class="mensagem"></section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

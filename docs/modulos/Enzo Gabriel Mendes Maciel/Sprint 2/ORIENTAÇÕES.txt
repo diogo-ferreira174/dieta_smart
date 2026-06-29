@@ -1,0 +1,8 @@
+Para o artefato funcionar corretamente, siga o passo a passo:
+
+1. Vá na pasta do projeto, aperte com o botão direito e clique em "Copiar como caminho"
+2. Abra o terminal do computador e digite: cd e aperte CTRL+V 
+3. Execute o comando: npx json-server --watch db.json --port 3000
+4. Abra o index.html com o LiveServer e clique no botão azul escrito "Atualizar"
+
+OBS: mantenha o terminal aberto para o artefato continuar funcionando corretamente!

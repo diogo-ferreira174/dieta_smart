@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafico de Evolução</title>
+
+    <link rel="stylesheet" href="pesagens.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <p class="titulo">Desempenho acompanhado</p>
+            <div class="container2">
+                <p class="titulo">Usuário selecionado:</p>
+
+                <div class="inputs">
+                    <label>Usuário:</label>
+                    <select id="usuario"></select>
+
+                    <div class="pesagens-info" id="pesagens-info"></div>
+
+                    <button id="atualizar">
+                        Atualizar gráfico
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="grafico">
+            <canvas id="graficolinha" width="500" height="500"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <script src="pesagens.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #eaf3ff 0%, #f4f7fd 40%, #f7f9fb 100%);
+    color: #222;
+}
+
+.page-shell {
+    min-height: 100vh;
+}
+
+.site-header {
+    padding: 48px 28px 36px;
+    background: linear-gradient(135deg, #4a90e2 0%, #5d9cec 100%);
+    color: #fff;
+    box-shadow: 0 18px 50px rgba(54, 97, 170, 0.15);
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.78rem;
+    opacity: 0.85;
+    margin: 0 0 12px;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    line-height: 1.05;
+}
+
+.subtitle {
+    margin: 16px 0 0;
+    max-width: 760px;
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.93;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.controle-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 22px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 16px 30px rgba(83, 110, 161, 0.08);
+    margin-bottom: 24px;
+}
+
+.controle-panel > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.controle-label {
+    margin: 0;
+    font-weight: 600;
+    color: #344563;
+}
+
+button,
+select {
+    padding: 14px 18px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 14px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+button {
+    background: #3366ff;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(51, 102, 255, 0.22);
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background: #244fd3;
+}
+
+select {
+    min-width: 180px;
+    background: #fff;
+    border: 1px solid #d7e0f1;
+    color: #2f456d;
+}
+
+select:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(51, 102, 255, 0.16);
+}
+
+.alimentos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.alimento-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(95, 116, 151, 0.12);
+    border-radius: 22px;
+    padding: 24px;
+    box-shadow: 0 24px 60px rgba(67, 97, 157, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.alimento-card:hover {
+    transform: translateY(-4px);
+}
+
+.alimento-card h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.tag-green {
+    background: #28c76f;
+}
+
+.tag-red {
+    background: #ff6b6b;
+}
+
+.alimento-card p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.alimento-card .nutrients {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 16px 0 0;
+}
+
+.nutrient-item {
+    background: #f6f9ff;
+    border-radius: 14px;
+    padding: 12px 14px;
+    text-align: center;
+}
+
+.nutrient-item strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.nutrient-item span {
+    color: #45608e;
+}
+
+.alimento-card.recomendavel {
+    border-color: #1abc9c;
+}
+
+.alimento-card.nao-recomendavel {
+    border-color: #ff4757;
+}
+
+.status {
+    margin-top: 18px;
+    font-weight: 700;
+    color: #28304b;
+}
+
+.mensagem {
+    margin-top: 24px;
+    padding: 18px 22px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #fffaf0 0%, #fff0f5 100%);
+    border: 1px solid #fde3d7;
+    color: #4e3d3d;
+    font-weight: 600;
+}
+
+@media (max-width: 660px) {
+    .controle-panel {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nutrients {
+        grid-template-columns: 1fr;
+    }
+}
+

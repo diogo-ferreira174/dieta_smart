@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Evolução</title>
+
+    <link rel="stylesheet" href="assets/css/pesagens.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img id="logo" src="assets/images/logo-maca.png" alt="logo">
+        </a>
+
+        <img id="iconMenu" src="assets/images/menu-icon.png" alt="menu-icon">
+
+        <div id="menuLateral">
+            <div id="conteudoMenu">
+                <div class="cabeca">Menu</div>
+                <div class="item"><a href="index.html">Home-Page</div></a>
+                <div class="item"><a href="dieta.html">Dieta</div></a>
+                <div class="item"><a href="exercicios.html">Treinos</div></a>
+                <div class="item"><a href="imc.html">Calculadora IMC</div></a>
+                <div class="item"><a href="evolucao.html">Evolução</div></a>
+                <div class="item"><a href="rotina.html">Rotina</div></a>
+                <div class="item"><a href="pesagens.html">Pesagens</div></a>
+                <div class="item"><a href="addAlimentos.html">Lista de Alimentos</div></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="container">
+
+            <div class="menu">
+
+                <p class="titulo">Desempenho acompanhado</p>
+
+                <!-- CADASTRO DE PESAGEM -->
+                <div class="container2">
+
+                    <p class="titulo">Nova Pesagem</p>
+
+                    <div class="formulario">
+
+                        <!-- DATA (FUNCIONA EM 100% DOS NAVEGADORES) -->
+                        <input type="date" id="data">
+
+                        <input
+                            type="number"
+                            id="peso"
+                            placeholder="Peso (kg)"
+                            step="0.1">
+
+                        <button id="btnAdicionarPesagem" type="button">
+                            Adicionar
+                        </button>
+
+                    </div>
+
+                    <p id="mensagemPesagem" class="mensagem-pesagem" aria-live="polite"></p>
+
+                </div>
+
+                <!-- HISTÓRICO -->
+                <div class="container2">
+
+                    <p class="titulo">Histórico de Pesagens</p>
+
+                    <ul class="pesagens-info" id="listaPesagens"></ul>
+
+                </div>
+
+            </div>
+
+            <!-- GRÁFICO -->
+            <div class="grafico">
+                <canvas id="graficolinha" width="500" height="500"></canvas>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <h2>DietaSmart™</h2>
+
+        <h4>Site por:</h4>
+
+        <ul>
+            <li>Arthur</li>
+            <li>Diogo</li>
+            <li>Enzo</li>
+            <li>Gabriel</li>
+            <li>Leandro</li>
+            <li>Oliveiros</li>
+            <li>Pedro</li>
+            <li>Vítor</li>
+        </ul>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+
+    <script src="assets/js/pesagens.js"></script>
+
+</body>
+
+</html>

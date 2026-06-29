@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Montar Dieta</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card" onclick="selecionar('cafe')">
+
+            <div class="mais">+</div>
+
+            <h2>Café da manhã</h2>
+
+            <div id="cafe" class="resultado"></div>
+
+        </div>
+
+
+
+        <div class="card" onclick="selecionar('almoco')">
+
+            <div class="mais">+</div>
+
+            <h2>Almoço</h2>
+
+            <div id="almoco" class="resultado"></div>
+
+        </div>
+
+
+
+        <div class="card" onclick="selecionar('lanche')">
+
+            <div class="mais">+</div>
+
+            <h2>Lanche</h2>
+
+            <div id="lanche" class="resultado"></div>
+
+        </div>
+
+
+
+        <div class="card" onclick="selecionar('janta')">
+
+            <div class="mais">+</div>
+
+            <h2>Janta</h2>
+
+            <div id="janta" class="resultado"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="total">
+
+        Total da dieta:
+        <span id="totalCalorias">0 kcal</span>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

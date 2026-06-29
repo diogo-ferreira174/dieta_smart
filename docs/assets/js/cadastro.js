@@ -1,0 +1,108 @@
+const nome = document.getElementById("nome");
+const idade = document.getElementById("idade");
+const altura = document.getElementById("altura");
+const peso = document.getElementById("peso");
+const frequencia = document.getElementById("frequencia");
+const sexo = document.getElementById("informeSexo");
+
+const formulario = document.getElementById("formulario");
+
+formulario.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    let valorNome = nome.value.trim();
+    let valorIdade = Number(idade.value);
+    let valorSexo = sexo.value;
+    let valorAltura = Number(altura.value);
+    let valorPeso = Number(peso.value);
+    let valorFrequencia = Number(frequencia.value);
+
+    // Validação dos campos
+    if (!valorNome) {
+        alert("Informe o nome.");
+        return;
+    }
+
+    if (!idade.value) {
+        alert("Informe a idade.");
+        return;
+    }
+
+    if (!altura.value) {
+        alert("Informe a altura.");
+        return;
+    }
+
+    if (!peso.value) {
+        alert("Informe o peso.");
+        return;
+    }
+
+    if (valorIdade <= 0) {
+        alert("Informe uma idade válida.");
+        return;
+    }
+
+    if (valorAltura <= 0) {
+        alert("Informe uma altura válida.");
+        return;
+    }
+
+    if (valorPeso <= 0) {
+        alert("Informe um peso válido.");
+        return;
+    }
+
+    let tmb = null;
+    let get = null;
+
+    if (valorAltura < 3) {
+        valorAltura = valorAltura * 100;
+    }
+
+    if (valorSexo === "M") {
+        tmb = 88.36 + (13.4 * valorPeso) + (4.8 * valorAltura) - (5.7 * valorIdade);
+    } else {
+        tmb = 447.6 + (9.2 * valorPeso) + (3.1 * valorAltura) - (4.3 * valorIdade);
+    }
+
+    get = tmb * valorFrequencia;
+
+    const dados = {
+        "nome": valorNome,
+        "idade": valorIdade,
+        "sexo": valorSexo,
+        "peso": valorPeso,
+        "altura": valorAltura,
+        "tmb": Number(tmb.toFixed(2)),
+        "get": Number(get.toFixed(2)),
+        "nível de atividdae física": valorFrequencia,
+        "pesagens": [],
+        "cadastrado": true
+    };
+
+    try {
+        const resposta = await fetch('http://localhost:3000/usuarios', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(dados)
+        });
+
+        if (resposta.ok) {
+            const usuarioCriado = await resposta.json();
+
+            localStorage.setItem("idProcurado", String(usuarioCriado.id));
+
+            window.location.href = "index.html";
+        } else {
+            alert('Algo deu errado');
+        }
+    }
+    catch (erro) {
+        console.error('Algo deu errado: ', erro);
+        alert('Erro ao cadastrar usuário.');
+    }
+});

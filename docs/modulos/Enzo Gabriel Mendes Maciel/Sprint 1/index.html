@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioSmart - Perfil Completo do Usuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="dashboard-container">
+        <h1 class="page-title">📌 Painel do Usuário: Cadastro & Condição Física</h1>
+
+        <div class="dashboard-grid">
+            
+            <section class="card">
+                <h2>📑 Dados do Usuário</h2>
+                <div class="info-group">
+                    <span class="info-label">Nome</span>
+                    <input type="text" class="info-value" value="Enzo Gabriel Mendes Maciel" readonly>
+                </div>
+                <div class="info-group">
+                    <span class="info-label">Email</span>
+                    <input type="email" class="info-value" value="enzo.maciel@email.com" readonly>
+                </div>
+                <div class="info-row">
+                    <div class="info-group">
+                        <span class="info-label">Idade</span>
+                        <input type="text" class="info-value" value="19 anos" readonly>
+                    </div>
+                    <div class="info-group">
+                        <span class="info-label">Sexo</span>
+                        <input type="text" class="info-value" value="Masculino" readonly>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>🫀 Condição Física & Biometria</h2>
+                <div class="info-row">
+                    <div class="info-group">
+                        <span class="info-label">Peso Atual</span>
+                        <input type="text" class="info-value highlight-weight" value="82.5 kg" readonly>
+                    </div>
+                    <div class="info-group">
+                        <span class="info-label">Altura</span>
+                        <input type="text" class="info-value" value="1.78 m" readonly>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-group">
+                        <span class="info-label">IMC</span>
+                        <input type="text" class="info-value" value="26.0" readonly>
+                    </div>
+                    <div class="info-group">
+                        <span class="info-label">Classificação do IMC</span>
+                        <input type="text" class="info-value alert-status" value="Sobrepeso" readonly>
+                    </div>
+                </div>
+                <div class="info-group">
+                    <span class="info-label">Condição Física Geral</span>
+                    <input type="text" class="info-value" value="Excelente saúde cardiovascular, sem lesões" readonly>
+                </div>
+            </section>
+
+            <section class="card full-width">
+                <h2>🎯 Objetivos & Metas Diárias</h2>
+                <div class="metrics-grid">
+                    <div class="info-group">
+                        <span class="info-label">Objetivo</span>
+                        <input type="text" class="info-value target" value="Ganhar Massa Muscular" readonly>
+                    </div>
+                    <div class="info-group">
+                        <span class="info-label">Nível de Atividade Física</span>
+                        <input type="text" class="info-value" value="Moderadamente Ativo (Treino 3-5x/semana)" readonly>
+                    </div>
+                    <div class="info-group">
+                        <span class="info-label">Quantidade de Água Diária</span>
+                        <input type="text" class="info-value water" value="2.9 Litros / dia" readonly>
+                    </div>
+                    <div class="info-group">
+                        <span class="info-label">Meta de Calorias</span>
+                        <input type="text" class="info-value calories" value="2.850 kcal / dia" readonly>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card full-width">
+                <h2>📈 Histórico de Peso</h2>
+                <div class="table-container">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Data da Pesagem</th>
+                                <th>Peso Registrado</th>
+                                <th>Evolução</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>24/05/2026 (Atual)</td>
+                                <td><strong>82.5 kg</strong></td>
+                                <td class="stable">Atual</td>
+                            </tr>
+                            <tr>
+                                <td>10/04/2026</td>
+                                <td>81.2 kg</td>
+                                <td class="up">+ 1.3 kg</td>
+                            </tr>
+                            <tr>
+                                <td>05/03/2026</td>
+                                <td>79.8 kg</td>
+                                <td class="up">+ 1.4 kg</td>
+                            </tr>
+                            <tr>
+                                <td>15/01/2026</td>
+                                <td>78.5 kg</td>
+                                <td class="start">Início do plano</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

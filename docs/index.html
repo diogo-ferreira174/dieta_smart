@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietaSmart</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body onload="checaCadastro()">
+    <header>
+        <div class="header-left">
+            <a href="index.html">
+                <img id="logo" src="assets/images/logo-maca.png" alt="logo.png">
+            </a>
+            <div id="userInfo" class="userInfo"></div>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+            <p id="logout" style="margin-right: 30px; color: white;">fazer logout</p>
+            <img id="iconMenu" src="assets/images/menu-icon.png" alt="menu-icon">
+        </div>
+
+        <div id="menuLateral">
+            <div id="conteudoMenu">
+                <div class="cabeca">Menu</div>
+                <div class="item"><a href="index.html">Home-Page</div></a>
+                <div class="item"><a href="dieta.html">Dieta</div></a>
+                <div class="item"><a href="exercicios.html">Treinos</div></a>
+                <div class="item"><a href="imc.html">Calculadora IMC</div></a>
+                <div class="item"><a href="evolucao.html">Evolução</div></a>
+                <div class="item"><a href="rotina.html">Rotina</div></a>
+                <div class="item"><a href="pesagens.html">Pesagens</div></a>
+                <div class="item"><a href="addAlimentos.html">Lista de Alimentos</div></a>
+            </div>
+        </div>
+
+    </header>
+    <main>
+
+       
+        <div id="textos">
+            <h2 style="display:inline;">DietaSmart™</h2><p style="display:inline;">permite verificar diversas informações sobre sua condição física e organizar seu dia a dia de forma ágil e efetiva.</p>
+            <br>
+        </div>
+        <div class="fileira">
+            <div id="caulculadoraIMC" class="funcionalidade">
+                <div class="container" id = "linkCalculadora" onclick="window.location.href = 'imc.html' ">
+                    <h3>Calculadora IMC</h3>
+                    <div class="campo">
+                        <label for="peso">Peso (kg)</label>
+                        <input type="number" id="peso" placeholder="Ex: 70">
+                    </div>
+                    <div class="campo">
+                        <label for="altura">Altura (m)</label>
+                        <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75">
+                    </div>
+                    <button id="btnIMC">
+                        Calcular
+                    </button>
+                    <br><br>
+                    <div class="resultado" id="resultado">
+                        Informe seus dados
+                    </div>
+                </div>
+            </div>
+            <div class="funcionalidade">
+                <div class="container">
+                    <div id="DietasHomePage" onclick="window.location.href = 'dieta.html' ">
+                        <h3>Montador de Dietas</h3>
+
+                        <div class="seletor">
+                            <div class="mais" onclick="selecionar('cafe', 0)">+</div>
+                            <h4>Café da manhã</h4>
+                            <div id="areaCheckbox0"></div>
+                        </div>
+
+                        <div class="seletor">
+                            <div class="mais" onclick="selecionar('almoco', 1)">+</div>
+                            <h4>Almoço</h4>
+                            <div id="areaCheckbox1"></div>
+                        </div>
+
+                        <div class="seletor">
+                            <div class="mais" onclick="selecionar('lanche', 2)">+</div>
+                            <h4>Lanche</h4>
+                            <div id="areaCheckbox2"></div>
+                        </div>
+
+                        <div class="seletor">
+                            <div class="mais" onclick="selecionar('janta', 3)">+</div>
+                            <h4>Janta</h4>
+                            <div id="areaCheckbox3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="funcionalidade">
+                <div class="container">
+                    <div id="RotinasHomePage" onclick="window.location.href = 'exercicios.html' ">
+                        <h3>Montador de Rotinas</h3>
+
+                        <div class="seletor" id="${i+1}">
+                            <h4>Exercício</h4>
+                            <select id="escolha${i+1}">
+                                <option>caminhada</option>   
+                            </select>
+                        </div>
+
+                        <div class="seletor" id="${i+1}">
+                            <h4>Exercício</h4>
+                            <select id="escolha${i+1}">
+                                <option>caminhada</option>
+                            </select>
+                        </div>
+
+                        <div class="seletor" id="${i+1}">
+                            <h4>Exercício</h4>
+                            <select id="escolha${i+1}">
+                                <option>caminhada</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="funcionalidade">
+                <div class="container">
+                    <div id="AlimentosHomePage" onclick="window.location.href = 'alimentos.html'">
+                        <h3>Consulta de Alimentos</h3>
+                        <p class="home-card-texto">Veja informações nutricionais dos alimentos do banco e saiba se eles são recomendáveis para a sua dieta.</p>
+                        <div class="home-card-badge">Abrir página</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h2>DietaSmart™</h2>
+        <h4>Site por:</h4>
+        <ul>
+            <li>Arthur</li>
+            <li>Diogo</li>
+            <li>Enzo</li>
+            <li>Gabriel</li>
+            <li>Leandro</li>
+            <li>Oliveiros</li>
+            <li>Pedro</li>
+            <li>Vítor</li>
+        </ul>
+    </footer>
+
+    <script src="assets/js/home.js"></script>
+</body>
+</html>

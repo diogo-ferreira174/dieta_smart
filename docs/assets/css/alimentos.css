@@ -1,0 +1,164 @@
+.alimentos-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+}
+
+.page-intro {
+    margin: 20px 0 30px;
+    padding: 24px 28px;
+    background: #eefbcf;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(90, 127, 39, 0.14);
+}
+
+.page-intro h1 {
+    margin: 0 0 8px;
+    color: #1b2416;
+}
+
+.page-intro p {
+    margin: 0;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+.controle-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 22px;
+    border-radius: 16px;
+    background: #f7fce7;
+    box-shadow: 0 8px 20px rgba(90, 127, 39, 0.12);
+    margin-bottom: 24px;
+}
+
+.controle-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.controle-label {
+    font-weight: 700;
+    color: #30440f;
+}
+
+.controle-panel select,
+.controle-panel button {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #c7d98e;
+    font-size: 0.95rem;
+}
+
+.controle-panel button {
+    background: #5a7f27;
+    color: white;
+    cursor: pointer;
+}
+
+.controle-panel button:hover {
+    background: #47641d;
+}
+
+.alimentos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+}
+
+.alimento-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 24px rgba(48, 68, 15, 0.11);
+    border: 2px solid transparent;
+}
+
+.alimento-card.recomendavel {
+    border-color: #4caf50;
+}
+
+.alimento-card.nao-recomendavel {
+    border-color: #d9534f;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.card-head h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #223015;
+}
+
+.tag {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+}
+
+.tag-green {
+    background: #4caf50;
+}
+
+.tag-red {
+    background: #d9534f;
+}
+
+.alimento-card p {
+    margin: 8px 0;
+    color: #4c4c4c;
+}
+
+.nutrients {
+    margin-top: 14px;
+    display: grid;
+    gap: 10px;
+}
+
+.nutrient-item {
+    background: #f8fce8;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.nutrient-item strong {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.mensagem {
+    margin-top: 20px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    background: #fffbe8;
+    color: #735a00;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .controle-panel {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .controle-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

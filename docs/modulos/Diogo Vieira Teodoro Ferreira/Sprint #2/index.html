@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietaSmart - Agenda</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>DietaSmart</h1>
+            <p class="subtitle">Organize seus horários de refeições e exercícios de forma prática.</p>
+        </header>
+
+        <form id="agendaForm">
+            <section class="card">
+                <h2>Dieta</h2>
+
+                <div class="campo">
+                    <label for="ref1">Refeição 1</label>
+                    <input type="time" id="ref1" name="ref1">
+                </div>
+
+                <div class="campo">
+                    <label for="ref2">Refeição 2</label>
+                    <input type="time" id="ref2" name="ref2">
+                </div>
+
+                <div class="campo">
+                    <label for="ref3">Refeição 3</label>
+                    <input type="time" id="ref3" name="ref3">
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Exercícios</h2>
+
+                <div class="campo">
+                    <label for="exe1">Exercício 1</label>
+                    <input type="time" id="exe1" name="exe1">
+                </div>
+
+                <div class="campo">
+                    <label for="exe2">Exercício 2</label>
+                    <input type="time" id="exe2" name="exe2">
+                </div>
+
+                <div class="campo">
+                    <label for="exe3">Exercício 3</label>
+                    <input type="time" id="exe3" name="exe3">
+                </div>
+            </section>
+
+            <div class="actions">
+                <button type="button" id="salvarBtn">Salvar Horários</button>
+                <button type="button" id="limparBtn" class="secondary">Limpar Agenda</button>
+            </div>
+        </form>
+
+        <section id="resultado" class="resultado card" aria-live="polite">
+            <p>Preencha os horários e clique em "Salvar Horários".</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

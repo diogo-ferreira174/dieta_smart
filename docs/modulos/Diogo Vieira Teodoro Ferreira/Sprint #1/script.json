@@ -1,0 +1,19 @@
+{
+  "planos": [
+    {
+      "objetivo": "emagrecimento",
+      "dieta": "Baixo carboidrato",
+      "rotina": "Corrida e bicicleta"
+    },
+    {
+      "objetivo": "hipertrofia",
+      "dieta": "Rica em proteínas",
+      "rotina": "Musculação"
+    },
+    {
+      "objetivo": "manutencao",
+      "dieta": "Equilibrada",
+      "rotina": "Caminhada e alongamento"
+    }
+  ]
+}
